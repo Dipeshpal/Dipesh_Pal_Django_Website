@@ -1,29 +1,31 @@
-{% load static from staticfiles %}
+    {% load static from staticfiles %}
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="Dipesh Pal" content="">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="Dipesh Pal" content="">
 
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image/png"  href="http://gdurl.com/jScY" %}>
+        <!-- favicon -->
+        <link rel="shortcut icon" type="image/png"  href="http://gdurl.com/jScY" %}>
 
-    {% block title %}<title>Dipesh Pal</title>{% endblock %}
+        {% block title %}<title>Dipesh Pal</title>{% endblock %}
 
-    <!-- Custom styles for this template -->
-    <link href="{% static '/css/business-frontpage.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static '/css/business-frontpage.css' %}" rel="stylesheet">
+        <link href="{% static '/css/all_custom.css' %}" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!--<script src="./jquery.min.js"></script>-->
-	<script src="{% static '/jquery/jquery-1.9.1.min.js' %}"></script>
-	<script src="{% static '/js/youmax.js' %}"></script>
-	<link href="{% static '/css/youmax.css' %}" rel="stylesheet" />
+        <!--<script src="./jquery.min.js"></script>-->
+        <script src="{% static '/jquery/jquery-1.9.1.min.js' %}"></script>
+        <script src="{% static '/js/all_custom.js' %}"></script>
+        <script src="{% static '/js/youmax.js' %}"></script>
+        <link href="{% static '/css/youmax.css' %}" rel="stylesheet" />
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png"  href="http://gdurl.com/jScY" %}>
@@ -96,22 +98,22 @@
           </div>
         </nav>
     </header>
-        <div class="block_content_baseLayout2">
+        <!--<div class="block_content_baseLayout2">-->
 
-            <!-- Google ads for content Start -->
-             <div class="content-section">
-                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client="ca-pub-6717309277759744"
-                         data-ad-slot="5066598116"></ins>
-                  <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>
-             </div>
-            <!-- Google ads for content End -->
+            <!--&lt;!&ndash; Google ads for content Start &ndash;&gt;-->
+             <!--<div class="content-section">-->
+                  <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+                    <!--<ins class="adsbygoogle"-->
+                         <!--style="display:block; text-align:center;"-->
+                         <!--data-ad-layout="in-article"-->
+                         <!--data-ad-format="fluid"-->
+                         <!--data-ad-client="ca-pub-6717309277759744"-->
+                         <!--data-ad-slot="5066598116"></ins>-->
+                  <!--<script>-->
+                     <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+                  <!--</script>-->
+             <!--</div>-->
+            <!--&lt;!&ndash; Google ads for content End &ndash;&gt;-->
 
             {% block content %}
             {% endblock %}

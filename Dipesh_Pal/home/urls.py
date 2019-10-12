@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^News/', views.News, name="News"),
     url(r'^Android/', views.android, name="android"),
     url(r'^PC/', views.PC, name="PC"),
+    url(r'^Offers/', views.Offers, name="Offers"),
     url(r'^Others/', views.Others, name="Others"),
     url(r'^create/$', views.article_create, name="create"),
     url(r'^(?P<slug>[\w-]+)/$', views.article_detail, name="detail"),

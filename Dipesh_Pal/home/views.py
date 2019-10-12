@@ -3,11 +3,15 @@ from . models import Home
 from django.contrib.auth.decorators import login_required
 from . import forms
 from django.core.paginator import Paginator
-from .social_stats_counter import start
+# from .social_stats_counter import start
+
 
 def homepage(request):
-    a, b, c = start()
-    print(a, b, c)
+    # a, b, c = start()
+    # print(a, b, c)
+    a = 9.7  # YouTube
+    b = 343  # Instagram
+    c = 50  # Twitter
     homeblog_list = Home.objects.all().order_by('-date')
 
     # Pagination
@@ -27,12 +31,7 @@ def homepage(request):
 
 def android(request):
     homeblog_list = Home.objects.all().order_by('-date')
-
-    # homeblog_list = Home.objects.all().order_by('-date')
-    # Pagination
-    # Show 10 Post Per Page
     paginator = Paginator(homeblog_list, 10)
-
     page = request.GET.get('page')
     homeblog = paginator.get_page(page)
     return render(request, 'home/Android.html', {'articles': homeblog})
@@ -40,12 +39,7 @@ def android(request):
 
 def PC(request):
     homeblog_list = Home.objects.all().order_by('-date')
-
-    # homeblog_list = Home.objects.all().order_by('-date')
-    # Pagination
-    # Show 10 Post Per Page
     paginator = Paginator(homeblog_list, 10)
-
     page = request.GET.get('page')
     homeblog = paginator.get_page(page)
     return render(request, 'home/PC.html', {'articles': homeblog})
@@ -53,25 +47,23 @@ def PC(request):
 
 def News(request):
     homeblog_list = Home.objects.all().order_by('-date')
-
-    # homeblog_list = Home.objects.all().order_by('-date')
-    # Pagination
-    # Show 10 Post Per Page
     paginator = Paginator(homeblog_list, 10)
-
     page = request.GET.get('page')
     homeblog = paginator.get_page(page)
     return render(request, 'home/News.html', {'articles': homeblog})
 
 
+def Offers(request):
+    homeblog_list = Home.objects.all().order_by('-date')
+    paginator = Paginator(homeblog_list, 10)
+    page = request.GET.get('page')
+    homeblog = paginator.get_page(page)
+    return render(request, 'home/Offers.html', {'articles': homeblog})
+
+
 def Others(request):
     homeblog_list = Home.objects.all().order_by('-date')
-
-    # homeblog_list = Home.objects.all().order_by('-date')
-    # Pagination
-    # Show 10 Post Per Page
     paginator = Paginator(homeblog_list, 10)
-
     page = request.GET.get('page')
     homeblog = paginator.get_page(page)
     return render(request, 'home/Others.html', {'articles': homeblog})
